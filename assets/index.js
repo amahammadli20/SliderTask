@@ -17,28 +17,28 @@ function openSection(event, tabName) {
   }
 
 
-  function displayCurrentTab(event, tabName){
-    var tabContent = document.getElementsByClassName("contentText");
-    for(var i = 0; i < tabContent.length; i++) {
-        if(tabContent[i].style.display = "block"){
-            tabContent[i].style.display = "none";
-            tabContent[i] = tabContent[i + 1];
-            tabContent[i].style.display = "block";
-        }
-      }
-    var tabLinks = document.getElementsByClassName("tablinks");
-    for (var i = 0; i < tabLinks.length; i++) {
-        if(tabLinks[i].classList.contains("active")){
-            console.log(tabLinks[i]);
-            tabLinks[i].className = tabLinks[i].className.replace("active", "");
-            tabLinks[i] = tabLinks[i + 1];
-            console.log(tabLinks[i+1]);
-            event.currentTarget.className += " active";
-        }
-    }
-  }
+  // function displayCurrentTab(event, tabName){
+  //   var tabContent = document.getElementsByClassName("contentText");
+  //   for(var i = 0; i < tabContent.length; i++) {
+  //       if(tabContent[i].style.display = "block"){
+  //           tabContent[i].style.display = "none";
+  //           tabContent[i] = tabContent[i + 1];
+  //           tabContent[i].style.display = "block";
+  //       }
+  //     }
+  //   var tabLinks = document.getElementsByClassName("tablinks");
+  //   for (var i = 0; i < tabLinks.length; i++) {
+  //       if(tabLinks[i].classList.contains("active")){
+  //           console.log(tabLinks[i]);
+  //           tabLinks[i].className = tabLinks[i].className.replace("active", "");
+  //           tabLinks[i] = tabLinks[i + 1];
+  //           console.log(tabLinks[i+1]);
+  //           event.currentTarget.className += " active";
+  //       }
+  //   }
+  // }
 
-  var nextButton = document.getElementById("next");
+  // var nextButton = document.getElementById("next");
 
-  nextButton.addEventListener("click", displayCurrentTab);
+  // nextButton.addEventListener("click", displayCurrentTab);
 
