@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maliapp</title>
+    <link rel="icon" href="./assets/images/maliapp.png" type="image/icon type">
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            
+            <div class="tabs">
+                <button class="tablinks active" onclick="openSection(event, 'home')"><i class="fas fa-home"></i>Ana Səhifə</button>
+                <button class="tablinks" onclick="openSection(event, 'blog')"><i class="fab fa-blogger"></i>Bloq</button>
+                <button class="tablinks" onclick="openSection(event, 'support')"><i class="fas fa-headset"></i>Dəstək</button>
+                <button class="tablinks" onclick="openSection(event, 'about')"><i class="far fa-address-card"></i>Haqqımızda</button>
+                <button class="tablinks" onclick="openSection(event, 'contact')"><i class="fas fa-envelope-open-text"></i>Kontakt</button>
+            </div>
+
+                <section>
+                    <div class="contentText contentText-1" id="home">
+                        <h1>Bura Ana səhifədir</h1>
+                        <p>Vaxtınızı daha mühüm məsələlərə yönəldin! Maliapp sizin uçot 
+                            məlumatlarınızın daim qayğısına qalır! Maliapp sizin əməliyyatlarınızı analiz edərək biznesiniz haqqında mühüm göstəriciləri anlaşılan formada göstərir! Biznesiniz üçün sənədləri avtomatik yaradın. Vergi öhdəliyinizi asanlıqla hesablayın.</p>
+                        <img src="https://www.indiafilings.com/learn/wp-content/uploads/2015/07/starting-a-business-in-India-for-foreign-company.jpg" alt="">
+                    </div>
+
+                    <div class="contentText contentText-2" id="blog">
+                        <h1>Bura Blog bölməsidir</h1>
+                        <h2>Bazar araşdırması</h2>
+                        <p>Şirkətlər bazar araşdırmasında və yeni məhsul inkişafında statistikadan istifadə edirlər. Təklif olunan bir məhsulun bazar qəbulunu və potensialını ölçmək üçün istehlakçılardan təsadüfi sorğular keçirirlər. Menecerlər məhsula kifayət qədər tələbin olub-olmadığını bilmək istəyirlər.</p>
+                        <img src="https://www.thoughtco.com/thmb/SOQV0Q-OLy490Lf_RETbguDXj5g=/2121x1414/filters:fill(auto,1)/how-to-start-a-blog-for-free-4687144-1-ab38a1b4fb5d4ed3bb58026b5dd49d54.jpg" alt="">
+                    </div>
+
+                    <div class="contentText contentText-3" id="support">
+                        <h1>Bura Dəstək bölməsidir</h1>
+                        <p>Bugündən etibarən maliapp istifadəçilərin xidmətinə verilib. Bu hissədə mütəmadi olaraq sistem yenilikləri haqqında məlumat yerləşdiriləcək. Aşağıdakı hissələrdə dəstək məlumatları ilə tanış ola bilərsiniz.<br>Statistika səhifəsinə keçid etməklə siz biznesiniz haqqında statistik göstəriciləri görə bilərsiniz.</p>
+                        <img src="https://www.verifone.com/sites/default/files/styles/hero_primary_m/public/DK_CustomerserviceCategory_Hero_3200x1800_1.jpg?itok=fVNl89vG" alt="">
+                    </div>
+
+                    <div class="contentText contentText-4" id="about">
+                        <h1>Bura Haqqımızda bölməsidir</h1>
+                        <p>Maliapp-in məqsədi mikro və kiçik sahibkarların üzləşdiyi çətinlikləri aradan qaldırmaq və
+                            onların ölkə iqtisadiyyatına töhfəsini daha da gücləndirməkdir. Bunun üçün maliapp proqram
+                            təminatı üzərindən istifadəçilərimizin tələblərinə uyğun bir sıra yüksək səviyyəli xidmətlər
+                            göstəririk və onların biznes əməliyyatlarının asanlıqla idarə oluna biləcəyi vahid platforma
+                            yaradırıq.</p>
+                        <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_504271344_375077.jpg" alt="">
+                    </div>
+
+                    <div class="contentText contentText-5" id="contact">
+                        <h1>Bura Əlaqə bölməsidir</h1>
+                        <p>Təklif və ya iradınız var? Çəkinməyin!<br> Müraciətinizi ünvanlayın və əməkdaşlarımız ən qısa zamanda sizin suallarınızı cavablandırsın! Lazımi vasitələrdən bizimlə əlaqə saxlaya bilərsiniz. 7/24 xidmətinizdəyik!</p>
+                        <img src="https://img.freepik.com/free-photo/close-up-image-male-hands-using-smartphone-with-icon-telephone-email-mobile-phone-address-contact-us-connection-e-mail-marketing-concept_20693-316.jpg?size=626&ext=jpg" alt="">
+                    </div> 
+                </section>
+
+                <div class="swipe-buttons">
+                    <button id="back">Keç</button>
+                    <button id="next">Növbəti<i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="togglePopup()" id="main-button">Maliapp</button>
+
+    <script src="./assets/index.js"></script>
+</body>
+</html>

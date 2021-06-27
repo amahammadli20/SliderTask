@@ -1,0 +1,187 @@
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+#main-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:15px;
+    font-size:18px;
+    border:1px solid #222;
+    color:#222;
+    text-transform:uppercase;
+    font-weight:600;
+    background:#fff;
+  }
+
+  #main-button:hover{
+      background: #35D8AB;
+  }
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 250vh;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 95%;
+    max-width: 700px;
+    min-height: 550px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.popup .close-btn:hover{
+    background-color: rgb(85, 84, 84);
+}
+
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transition: all 300mx ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* tabs */
+.tabs{
+    margin-top: 17px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+
+.tabs button {
+    background-color: #fff;
+    color: #35D8AB;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .tabs button i{
+      margin-right: 5px;
+  }
+
+  .tabs button:hover {
+    background-color: #35D8AB;
+    color: #222;
+  }
+
+  .tabs button.active {
+    background-color: #9b9999;
+  }
+
+  .contentText {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    font-size: 17px;
+  }
+
+section .contentText img{
+    max-width: 300px;
+    max-height: 200px;
+    margin-top: 15px;
+}
+
+section .contentText p{
+    line-height: 25px;
+    font-size: 17px;
+}
+
+section .contentText h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+section .contentText h1{
+    font-weight: 700;
+    font-size: 23px;
+    margin: 25px 0 10px 0;
+}
+
+section #home{
+    display: block;
+}
+
+/* bottom left buttons */
+.swipe-buttons{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 20px;
+}
+
+.swipe-buttons button{
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 10px 15px 0;
+    border: none;
+}
+
+.swipe-buttons button:last-child i{
+    padding-left: 10px;
+}
+
+.swipe-buttons button:last-child{
+    background: #35D8AB;
+}
+
+@media (max-width: 600px){
+    .tabs{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .popup .content{
+        width: 100%;
+        min-height: 100%;
+        border-radius: 0;
+    }
+
+}
