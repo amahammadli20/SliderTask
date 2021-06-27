@@ -1,37 +1,38 @@
-body{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#main-button{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    padding:15px;
-    font-size:18px;
-    border:1px solid #222;
-    color:#222;
-    text-transform:uppercase;
-    font-weight:600;
-    background:#fff;
-  }
+#main-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #222;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #fff;
+    cursor: pointer;
+}
 
-  #main-button:hover{
-      background: #35D8AB;
-  }
+#main-button:hover {
+    background: #35D8AB;
+}
 
-.popup .overlay{
+.popup .overlay {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 250vh;
     height: 100vh;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
     display: none;
 }
 
-.popup .content{
+.popup .content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,7 +48,7 @@ body{
     border-radius: 5px;
 }
 
-.popup .close-btn{
+.popup .close-btn {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -63,22 +64,22 @@ body{
     cursor: pointer;
 }
 
-.popup .close-btn:hover{
+.popup .close-btn:hover {
     background-color: rgb(85, 84, 84);
 }
 
-.popup.active .overlay{
+.popup.active .overlay {
     display: block;
 }
 
-.popup.active .content{
+.popup.active .content {
     transition: all 300mx ease-in-out;
     transform: translate(-50%, -50%) scale(1);
 }
 
 
 /* tabs */
-.tabs{
+.tabs {
     margin-top: 17px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -97,57 +98,65 @@ body{
     transition: 0.3s;
     font-size: 15px;
     font-weight: 600;
-  }
+    transition: all 0.5s ease-in-out;
+}
 
-  .tabs button i{
-      margin-right: 5px;
-  }
+.tabs button i {
+    margin-right: 5px;
+}
 
-  .tabs button:hover {
+.tabs button:hover {
     background-color: #35D8AB;
     color: #222;
-  }
+}
 
-  .tabs button.active {
+.tabs button.active {
     background-color: #9b9999;
-  }
+}
 
-  .contentText {
+.contentText {
     display: none;
     padding: 6px 12px;
     border-top: none;
     font-size: 17px;
-  }
+}
 
-section .contentText img{
+.contentText.active {
+    display: block;
+}
+
+.tablinks.contentText {
+    display: block !important;
+}
+
+
+
+section .contentText img {
     max-width: 300px;
     max-height: 200px;
     margin-top: 15px;
 }
 
-section .contentText p{
+section .contentText p {
     line-height: 25px;
     font-size: 17px;
 }
 
-section .contentText h2{
+section .contentText h2 {
     font-size: 20px;
     font-weight: 600;
     margin: 10px 0;
 }
 
-section .contentText h1{
+section .contentText h1 {
     font-weight: 700;
     font-size: 23px;
     margin: 25px 0 10px 0;
 }
 
-section #home{
-    display: block;
-}
 
 /* bottom left buttons */
-.swipe-buttons{
+.swipe-buttons {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -156,7 +165,8 @@ section #home{
     margin-top: 20px;
 }
 
-.swipe-buttons button{
+.swipe-buttons button {
+    cursor: pointer;
     padding: 15px 25px;
     border-radius: 25px;
     font-weight: 600;
@@ -165,20 +175,20 @@ section #home{
     border: none;
 }
 
-.swipe-buttons button:last-child i{
+.swipe-buttons button:last-child i {
     padding-left: 10px;
 }
 
-.swipe-buttons button:last-child{
+.swipe-buttons button:last-child {
     background: #35D8AB;
 }
 
-@media (max-width: 600px){
-    .tabs{
+@media (max-width: 600px) {
+    .tabs {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .popup .content{
+    .popup .content {
         width: 100%;
         min-height: 100%;
         border-radius: 0;
